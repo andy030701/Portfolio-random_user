@@ -1,0 +1,262 @@
+/*importation des fonts*/
+/*font pour les textes normaux*/
+@font-face {
+    font-family: 'Oswald-Regular';
+    src: url(./Assets/fonts/Oswald-Regular.ttf);
+}
+@font-face {
+    font-family: 'Oswald-Medium';
+    src: url(./Assets/fonts/Oswald-Medium.ttf);
+}
+
+
+/*font pour les titres*/
+@font-face {
+    font-family: 'NotoSansJP';
+    src: url(./Assets/fonts/NotoSansJP-Black.otf);
+}
+
+/*enlevons les margins et padding*/
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+/*positionnement des elements dans le header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 20px;
+    background: #ffffff;
+    flex-wrap: wrap;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+/*style de l'image dans le header et sa descri*/
+header .img-desc {
+    display: flex;
+}
+
+/*style de l'image dans le header*/
+
+header .img-desc img{
+    border-radius: 50%;
+}
+
+/*style du titre de l'image dans le header*/
+header .img-desc h3{
+    font-family: 'NotoSansJP','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 5px;
+    margin-left: 1rem;
+}
+
+/*positionnement des elements dans la navbar*/
+nav ul{
+    display: flex;
+}
+
+
+/*style des li dans la navbar*/
+nav ul li{
+    list-style-type: none;
+    padding-left:20px ;
+    padding-right: 20px;
+    font-family: 'NotoSansJP','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid #ffffff;
+    cursor: pointer;
+    /* padding-bottom: 20px; */
+}
+
+/*styles des li dans la navbar lorsque la souris passe au dessus des li*/
+nav ul li:hover{
+    border-bottom-color: #000000;
+}
+
+/*style du bloc principal*/
+main{
+    padding: 0 3rem;
+    padding-bottom: 5rem;
+}
+/*style de la description*/
+#description{
+    margin-top: 3rem;
+    padding-right: 200px;
+}
+
+#description h1{
+    font-family: 'Oswald-Regular','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4rem;
+    
+    padding-bottom: 2rem;
+}
+#description p{
+    font-family: 'NotoSansJP','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, .3);
+    line-height: 2rem;
+    padding-bottom: 2rem;
+}
+
+/*Style du lien "Dites Hey"*/
+#description a{
+    display: block;
+    text-decoration: none;
+    padding-bottom: 2rem;
+    color: #000000;
+    font-family: 'NotoSansJP','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*style du bloc contenant l'image*/
+#image {
+    padding-bottom: 2rem;
+}
+
+/*style de la section "projet"*/
+/* #projets{
+    display: flex;
+    flex-direction: column;
+    column-gap: 5rem;
+} */
+
+
+/*Style du titre "PROJETS REALISES"*/
+#projets h4{
+    font-family: 'Oswald-Regular','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+/*style de la liste des projets dans la div d'id "projects"*/
+#projets #projects{
+    display: flex;
+    
+}
+
+/*style des div dans la liste des projets*/
+#projets #projects div{
+    padding-right: 30px;
+}
+
+/*style des h3 dans la liste des projets*/
+#projets #projects div h3{
+    font-family: 'NotoSansJP','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 1rem;
+}
+
+/*style des paragraphes dans la liste des projets*/
+#projets #projects div .project-descri{
+    font-family: 'Oswald-Medium','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    padding-bottom: 1rem;
+}
+
+#projets #projects div .Date{
+    font-family: 'Oswald-Medium','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, .3);
+}
+
+/*style du footer*/
+footer{
+    background: #000000;
+    margin: 0 1rem;
+    color: #ffffff;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/*style du container des 3 listes : mes services, mon entreprise, mes adresses*/
+#list-container {
+
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Oswald-Medium','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    flex-wrap: wrap;
+}
+
+/*style des h3 dans les ul du container des listes*/
+#list-container ul h3 {
+      font-size: 20px;
+      color: rgba(255,255,255,.9);
+      padding-bottom: 1rem;
+}
+/*style des elements li dans les ul du container des listes*/
+#list-container ul li {
+    list-style-type: none;
+    font-size: 15px;
+    line-height: 2rem;
+    color: rgba(255,255,255,.6);
+}
+
+/***********************************RESPONSIVE*************************************************/
+@media screen and (max-width: 700px) 
+{  
+    /*style du header en responsive*/
+    header{
+        justify-content: center;
+    }
+    /*style de la liste ordonnee dans nav de l'entete*/
+    header nav ul {
+        display: none;
+    }    
+
+    /*style du bloc principal*/
+    main {
+        padding: 0 2rem;
+    }
+    
+    /*style de la partie description dans main*/
+    main #description{
+        padding-right: 0px;
+    }
+    /*style du titre dans la descri qui est dans le bloc principal*/
+    main #description h1{
+        font-size: 30px;
+    }
+
+    /*style de l'image dans la section #image de main*/
+    #image img{
+        height: 200px;
+    }
+    #projets h4{
+        font-size: 1.7rem;
+    }
+   /*style des div ayant l'id "projects" dans la section projets*/ 
+   #projets #projects{
+    flex-wrap: wrap;
+   }
+
+   /*style des div dans les section #projects de la section projets*/
+   #projets #projects div{
+       padding-bottom: 20px;      
+      
+   }
+
+   /*style des h3 dans les div dans #projects*/
+   #projets #projects div .Date{
+        font-size: 13px;
+   }
+
+   /*style du footer*/
+   footer{
+     margin: 0 10px;
+   }
+
+   /*style de #list container*/
+   #list-container {
+       padding:0 22px;
+       justify-content: left;
+   }
+   /*style des ul dans #list container*/
+   #list-container ul{
+    padding-bottom: 20px;
+   }
+}
+
+
+
+
